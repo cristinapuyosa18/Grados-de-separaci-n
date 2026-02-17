@@ -1,7 +1,7 @@
 # Proyecto 1: Grados de Separación
 
-## Autor
-Cristina Puyosa – Carnet: [tu número de carnet]
+## Estudiante
+Cristina Puyosa – Carnet: 23-10395
 
 ## Descripción
 Este proyecto implementa un programa en Kotlin que calcula los **grados de separación** entre dos personas a partir de un archivo de relaciones de amistad (`input.txt`). El grafo representa personas como vértices y amistades como aristas. La implementación asegura que se encuentre **el grado de separación mínimo** utilizando un algoritmo de búsqueda en anchura (BFS).
@@ -11,9 +11,8 @@ Este proyecto implementa un programa en Kotlin que calcula los **grados de separ
 ## Modificaciones al Proyecto 1
 1. Se adaptó la función `conectar` para que el grafo sea **no dirigido**, reflejando la simetría de la amistad:  
    - Si `A` es amigo de `B`, entonces `B` también es amigo de `A`.
-2. Se modificó BFS para:
+2. Se agregó y modificó BFS para:
    - Devolver tanto el **arreglo de predecesores** como la **distancia mínima** desde un vértice origen a todos los demás.
-   - Garantizar la correcta impresión del grado de separación.
 3. Se creó la función `idDeVertice` para exponer el mapeo interno de vértices y simplificar el acceso a sus índices.
 4. Se implementó la función `reader` para leer el archivo `input.txt` y construir el grafo automáticamente.
 
@@ -47,3 +46,10 @@ Este proyecto implementa un programa en Kotlin que calcula los **grados de separ
 ### Compilación
 ```bash
 kotlinc *.kt -include-runtime -d DegreesOfSeparation.jar
+```
+
+## Ejecución
+
+```bash
+java -jar DegreesOfSeparation.jar <Nombre1> <Nombre2>
+```
